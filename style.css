@@ -1,0 +1,226 @@
+body {
+    font-family:sans-serif;
+    height: 2000px ;
+    background: linear-gradient(45deg, #691616, #166964, #691665 );
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite
+
+}
+
+@keyframes colors {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+header {
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    font-size:25px;
+    color: white;
+    position: fixed;
+}
+
+.menu {
+    margin-right: 100px;
+    font-size: 30px;
+    display: flex;
+    float: right;
+    gap: 30px;
+}
+
+.link{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+
+}
+
+.link:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3 ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.link:hover::after {
+    transition: 0.5s;
+    width: 100%;
+    left: 0;
+}
+
+
+
+
+.intro {
+    position: absolute;
+    font-size:25px;
+    top: 200px;
+    left: 400px;
+    color: white;
+}
+
+span {
+    color: yellow;
+}
+
+.digitadoA {
+    overflow: hidden;
+    border-right: 2px;
+    white-space: nowrap;
+    animation: cursor 500ms 1s normal, escrever 1.5s 1s steps(40) normal both;
+}
+
+.digitadoB {
+    overflow: hidden;
+    border-right: 2px;
+    white-space: nowrap;
+    animation: cursor 500ms 3s infinite normal, escrever 1.5s 2.5s steps(40) normal both;
+
+}
+
+@keyframes escrever {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+@keyframes cursor {
+    from {
+        border-right: 2px solid white;
+    }
+    to {
+        border-right: transparent;
+    }
+}
+
+
+
+.pcImg {
+    position:absolute;
+    right: 300px;
+    top: 100px;
+    width:600px;
+    transition: all .8s;
+}
+
+.pcImg:hover{
+    transform: rotateZ(-360deg) scale(1.2);
+}
+
+.minhaFoto {
+    width: 400px;
+    transition: all .5s;
+}
+
+.minhaFoto:hover {
+    transform: scale(1.05) ;
+}
+
+
+.sobreMim {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size:25px;
+    top: 550px;
+}
+
+h3 {
+    font-size: 35px;
+    color: white;
+}
+
+.historia {
+    position: absolute;
+    text-align: justify;
+    left: 25%;
+
+}
+
+.tecnologias {
+    position: relative;
+    top: 820px;
+    color: white;
+    font-size:25px;
+    text-align: center;
+}
+
+.tecImgs {
+    height: 180px;
+}
+
+.move:hover {
+    transition: all .3s;
+    transform: scale(1.05) ;
+}
+
+.projetos {
+    position: relative;
+    text-align: center;
+    top: 750px;
+}
+
+.container-projetos {
+    position: relative;
+    text-align: center;
+    top: 50px;
+    font-size: 20px;
+    color: white;
+    width: 500px;
+    display: flex;
+    left:50px;
+    gap: 100px;
+}
+
+.sombra {
+    background-color: grey;
+    border-radius: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.sombra:hover{
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+.imgProjeto {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    background-color: white;
+    left: 0px;
+    width:100%;
+    position: absolute;
+    top: 2300px;
+    display: flex;
+}
+
+.dev {
+    position: relative;
+    left: 30px;
+}
